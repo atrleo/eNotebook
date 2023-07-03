@@ -15,14 +15,16 @@ function App() {
     <>
     <NoteState>
       <div>
-        <h1 style={{ alignItems: 'center', textAlign: 'center', color: 'darkgrey' }}>This is eNotebook</h1>
+   
 
         <Router>
           <Navbar />
+          <div className='container'>
           <Routes>
             <Route exact path="/home" element={<Home />}></Route>
             <Route exact path="/about" element={<About />}></Route>
           </Routes>
+          </div>
         </Router>
       </div>
 
