@@ -1,8 +1,8 @@
 
 import './App.css';
 import {
-  BrowserRouter as 
-  Router,
+  BrowserRouter as
+    Router,
   Route,
   Routes
 } from "react-router-dom";
@@ -14,25 +14,28 @@ import Alert from './components/Alert';
 function App() {
   return (
     <>
-    <NoteState>
-      <div>
-   
-
-        <Router>
-          <Navbar />
-          <Alert message="This is an alert box"/>
-          <div className='container'>
-          <Routes>
-            <Route exact path="/" element={<Home />}></Route>
-            <Route exact path="/about" element={<About />}></Route>
-          </Routes>
-          </div>
-        </Router>
-      </div>
+      <NoteState>
+        <div>
 
 
+          <Router>
+            <Navbar />
+            <Alert message="This is an alert box" />
+            <div className='container'>
+              <Routes>
 
-    </NoteState>
+                <Route exact path="/" element={<Home />}></Route>
+
+                <Route exact path="/about" element={<About />}></Route>
+              </Routes>
+            </div>
+
+          </Router>
+        </div>
+
+
+
+      </NoteState>
     </>
   );
 }

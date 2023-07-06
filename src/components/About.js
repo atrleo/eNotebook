@@ -1,17 +1,19 @@
-import React, {useContext, useEffect} from 'react';
-import noteContext from '../context/notes/noteContext';
+import React, { useContext, useEffect } from 'react';
+
 
 
 
 
 const About = () => {
-  
-;
-  
+
+  ;
+
   return (
     <div>
-     <h1>This is about section</h1>
+      <p>This is about section</p>
+   
     </div>
+    
   )
 }
 
