@@ -3,10 +3,12 @@ import Notes from './Notes';
 
 
 
+
 function Home() {
  
   return (
     <div>
+  
       <div className="container my-3">
         <h1>Add your notes</h1>
         <form>

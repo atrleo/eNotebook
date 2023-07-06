@@ -5,7 +5,7 @@ const NoteState = (props) => {
     // eslint-disable-next-line
     const notesInitials = [
         {
-          "_id": "6498436f9f4bc6d894c90e9a",
+          "_id": "6498436f9f4sbc6d894c90e9a",
           "user": "6497215cfaf94e2bc925ad3e",
           "title": "First Note ",
           "description": "This is the first note",
@@ -14,7 +14,7 @@ const NoteState = (props) => {
           "__v": 0
         },
         {
-          "_id": "6498462e9f4bc6d894c90e9d",
+          "_id": "6498462e9f4bc6dd894c90e9d",
           "user": "6497215cfaf94e2bc925ad3e",
           "title": "Second Note ",
           "description": "This is the Second note",
@@ -23,7 +23,7 @@ const NoteState = (props) => {
           "__v": 0
         },
         {
-          "_id": "6499398a5fefc7cc9c6b3ec2",
+          "_id": "6499398a5fefc7cc9fc6b3ec2",
           "user": "6497215cfaf94e2bc925ad3e",
           "title": "Second Note ",
           "description": "This is the Second note",
@@ -32,7 +32,7 @@ const NoteState = (props) => {
           "__v": 0
         },
         {
-          "_id": "649952b5c32d4c1d2815e6d6",
+          "_id": "649952b5c32d4c1d28s15e6d6",
           "user": "6497215cfaf94e2bc925ad3e",
           "title": "Third Note ",
           "description": "This is the third note",
@@ -41,7 +41,7 @@ const NoteState = (props) => {
           "__v": 0
         },
         {
-            "_id": "6499398a5fefc7cc9c6b3ec2",
+            "_id": "6499398a5fefc7cc9dc6b3ec2",
             "user": "6497215cfaf94e2bc925ad3e",
             "title": "Second Note ",
             "description": "This is the Second note",
@@ -50,7 +50,7 @@ const NoteState = (props) => {
             "__v": 0
           },
           {
-            "_id": "649952b5c32d4c1d2815e6d6",
+            "_id": "649952b5c32d4c1d28f15e6d6",
             "user": "6497215cfaf94e2bc925ad3e",
             "title": "Third Note ",
             "description": "This is the third note",

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Noteitem = (props) => {
     const { note } = props;
     return (
@@ -11,7 +12,8 @@ const Noteitem = (props) => {
                     <div className="card-body">
                         <h5 className="card-title text-primary " style={{ fontSize: "20px", fontWeight: "bold" }}>{note.title}</h5>
                         <p className="card-text text-secondary" style={{ fontSize: "16px" }}>{note.description} This is the description page which is used for to explain about the details of thes page.</p>
-                   
+                        <i className="fa-sharp fa-solid fa-trash mx-2" style={{color: "#3f4040"}}></i>
+                        <i className="fa-solid fa-pen-to-square mx-2" style={{color:"#3f4040"}}></i>
                     </div>
             </div>
 
