@@ -6,7 +6,7 @@ import Addnote from './Addnote';
 
 const Notes = () => {
     const context = useContext(noteContext);
-    const { notes, addNote } = context;
+    const { notes } = context;
     return (
         <>
             <Addnote />

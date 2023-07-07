@@ -2,98 +2,102 @@
 import { useState } from "react";
 import noteContext from "./noteContext";
 const NoteState = (props) => {
-    // eslint-disable-next-line
-    const notesInitials = [
-        {
-          "_id": "6498436f9f4sbc6d894c90e9a",
-          "user": "6497215cfaf94e2bc925ad3e",
-          "title": "First Note ",
-          "description": "This is the first note",
-          "tag": "Begin",
-          "date": "2023-06-25T13:38:55.169Z",
-          "__v": 0
-        },
-        {
-          "_id": "6498462e9f4bc6dd894c90e9d",
-          "user": "6497215cfaf94e2bc925ad3e",
-          "title": "Second Note ",
-          "description": "This is the Second note",
-          "tag": "Begin",
-          "date": "2023-06-25T13:50:38.162Z",
-          "__v": 0
-        },
-        {
-          "_id": "6499398a5fefc7cc9fc6b3ec2",
-          "user": "6497215cfaf94e2bc925ad3e",
-          "title": "Second Note ",
-          "description": "This is the Second note",
-          "tag": "Begin",
-          "date": "2023-06-26T07:08:58.258Z",
-          "__v": 0
-        },
-        {
-          "_id": "649952b5c32d4c1d28s15e6d6",
-          "user": "6497215cfaf94e2bc925ad3e",
-          "title": "Third Note ",
-          "description": "This is the third note",
-          "tag": "Third",
-          "date": "2023-06-26T08:56:21.084Z",
-          "__v": 0
-        },
-        {
-            "_id": "6499398a5fefc7cc9dc6b3ec2",
-            "user": "6497215cfaf94e2bc925ad3e",
-            "title": "Second Note ",
-            "description": "This is the Second note",
-            "tag": "Begin",
-            "date": "2023-06-26T07:08:58.258Z",
-            "__v": 0
-          },
-          {
-            "_id": "649952b5c32d4c1d28f15e6d6",
-            "user": "6497215cfaf94e2bc925ad3e",
-            "title": "Third Note ",
-            "description": "This is the third note",
-            "tag": "Third",
-            "date": "2023-06-26T08:56:21.084Z",
-            "__v": 0
-          }
-        
-      ]
+  // eslint-disable-next-line
+  const notesInitials = [
+    {
+      "_id": "6498436f9f4sbc6d894c90e9a",
+      "user": "6497215cfaf94e2bc925ad3e",
+      "title": "First Note ",
+      "description": "This is the first note",
+      "tag": "Begin",
+      "date": "2023-06-25T13:38:55.169Z",
+      "__v": 0
+    },
+    {
+      "_id": "6498462e9f4bc6dd894c90e9d",
+      "user": "6497215cfaf94e2bc925ad3e",
+      "title": "Second Note ",
+      "description": "This is the Second note",
+      "tag": "Begin",
+      "date": "2023-06-25T13:50:38.162Z",
+      "__v": 0
+    },
+    {
+      "_id": "6499398a5fefc7cc9fc6b3ec2",
+      "user": "6497215cfaf94e2bc925ad3e",
+      "title": "Second Note ",
+      "description": "This is the Second note",
+      "tag": "Begin",
+      "date": "2023-06-26T07:08:58.258Z",
+      "__v": 0
+    },
+    {
+      "_id": "649952b5c32d4c1d28s15e6d6",
+      "user": "6497215cfaf94e2bc925ad3e",
+      "title": "Third Note ",
+      "description": "This is the third note",
+      "tag": "Third",
+      "date": "2023-06-26T08:56:21.084Z",
+      "__v": 0
+    },
+    {
+      "_id": "6499398a5fefc7cc9dc6b3ec2",
+      "user": "6497215cfaf94e2bc925ad3e",
+      "title": "Second Note ",
+      "description": "This is the Second note",
+      "tag": "Begin",
+      "date": "2023-06-26T07:08:58.258Z",
+      "__v": 0
+    },
+    {
+      "_id": "649952b5c32d4c1d28f15e6d6",
+      "user": "6497215cfaf94e2bc925ad3e",
+      "title": "Third Note ",
+      "description": "This is the third note",
+      "tag": "Third",
+      "date": "2023-06-26T08:56:21.084Z",
+      "__v": 0
+    }
 
-      const [notes,setNotes] = useState(notesInitials);
+  ]
+
+  const [notes, setNotes] = useState(notesInitials);
 
 
 
-      //Add a Note
-      const addNote = (title,description,tag)=>{
-        console.log("Adding a new node")
-        //Api call is required
-        const note={
-          "_id": "649952b5c32d4c1d28f15e6d6",
-          "user": "6497215cfaf94e2bc925ad3e",
-          "title": title,
-          "description": description,
-          "tag": tag,
-          "date": "2023-06-26T08:56:21.084Z",
-          "__v": 0
-        }
-        setNotes(notes.concat(note))
+  //Add a Note
+  const addNote = (title, description, tag) => {
+    console.log("Adding a new node")
+    //Api call is required
+    const note = {
+      "_id": "649952b5c32d4c1d28f15e6d6",
+      "user": "6497215cfaf94e2bc925ad3e",
+      "title": title,
+      "description": description,
+      "tag": tag,
+      "date": "2023-06-26T08:56:21.084Z",
+      "__v": 0
+    }
+    setNotes(notes.concat(note))
 
-      }
-      //Edit a Note 
-      const editNote= ()=>{
+  }
+  //Edit a Note 
+  const editNote = () => {
 
-      }
-      //delete a Note
-      const deleteNote= ()=>{
+  }
+  //delete a Note
+  const deleteNote = (id) => {
+    //Api call is required
+    const newNote = notes.filter((note) => { return note._id !== id })
+    console.log('deleting the selected notewith id' + id)
+    setNotes(newNote);
 
-      }
-    return (
+  }
+  return (
 
-        <noteContext.Provider value={{notes,addNote,editNote,deleteNote}}>e
-            {props.children}
-        </noteContext.Provider>
-    )
+    <noteContext.Provider value={{ notes, addNote, editNote, deleteNote }}>
+      {props.children}
+    </noteContext.Provider>
+  )
 }
 export default NoteState;   

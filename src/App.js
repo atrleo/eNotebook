@@ -19,6 +19,7 @@ function App() {
 
 
           <Router>
+          
             <Navbar />
             <Alert message="This is an alert box" />
             <div className='container'>
