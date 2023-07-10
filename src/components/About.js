@@ -32,12 +32,6 @@ const About = () => {
   ></iframe>
 </map>
 
-
-
-
-
-
-
     </div>
 
   )
