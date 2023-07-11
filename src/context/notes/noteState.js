@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import noteContext from "./noteContext";
+import Notes from "../../components/Notes";
 const NoteState = (props) => {
   const host = "http://localhost:5000"
   // eslint-disable-next-line
@@ -66,7 +67,7 @@ const NoteState = (props) => {
 
     // API call
     const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
         "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ5NzIxNWNmYWY5NGUyYmM5MjVhZDNlIn0sImlhdCI6MTY4NzYyNjEwNn0.DUT7vYn0FVv4iqhgXw6HZ-OhPmATKmUmomT9oTtNCT0"
@@ -75,16 +76,18 @@ const NoteState = (props) => {
     });
     const json = response.json();
 
-
+    let newNotes =JSON.parse(JSON.stringify(notes))
     // logic to edit in client
-    for (let index = 0; index < notes.length; index++) {
+    for (let index = 0; index < newNotes.length; index++) {
       const element = notes[index];
       if (element._id === id) {
-        element.title = title;
-        element.description = description;
-        element.tag = tag;
+        newNotes[index].title = title;
+        newNotes[index].description = description;
+        newNotes[index].tag = tag;
+        break;
       }
     }
+    setNotes(newNotes)
 
   }
 
